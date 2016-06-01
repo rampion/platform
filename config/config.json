@@ -11,7 +11,7 @@
         "EnableOnlyAdminIntegrations": true,
         "EnablePostUsernameOverride": false,
         "EnablePostIconOverride": false,
-        "EnableTesting": false,
+        "EnableTesting": true,
         "EnableDeveloper": false,
         "EnableSecurityFixAlert": true,
         "EnableInsecureOutgoingConnections": false,

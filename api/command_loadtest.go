@@ -4,6 +4,7 @@
 package api
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"path"
@@ -11,6 +12,7 @@ import (
 	"strings"
 
 	l4g "github.com/alecthomas/log4go"
+	"github.com/gorilla/websocket"
 	"github.com/mattermost/platform/model"
 	"github.com/mattermost/platform/utils"
 )
@@ -107,6 +109,10 @@ func (me *LoadTestProvider) DoCommand(c *Context, channelId string, message stri
 		return me.PostsCommand(c, channelId, message)
 	}
 
+	if strings.HasPrefix(message, "websocket") {
+		return me.SocketCommand(c, channelId, message)
+	}
+
 	if strings.HasPrefix(message, "url") {
 		return me.UrlCommand(c, channelId, message)
 	}
@@ -114,6 +120,44 @@ func (me *LoadTestProvider) DoCommand(c *Context, channelId string, message stri
 		return me.JsonCommand(c, channelId, message)
 	}
 	return me.HelpCommand(c, channelId, message)
+}
+
+var conns []*websocket.Conn
+
+func (me *LoadTestProvider) SocketCommand(c *Context, channelId string, message string) *model.CommandResponse {
+	if strings.Contains(message, "close") {
+		if conns != nil {
+			for _, c := range conns {
+				c.Close()
+			}
+			conns = nil
+		}
+		return &model.CommandResponse{Text: "Closed all test WebSocket connections.", ResponseType: model.COMMAND_RESPONSE_TYPE_EPHEMERAL}
+	}
+
+	numConns, _ := strconv.Atoi(strings.TrimSpace(strings.TrimPrefix(message, "websocket")))
+
+	url := "ws://localhost" + utils.Cfg.ServiceSettings.ListenAddress + "/api/v3/users/websocket"
+	header := http.Header{}
+	header.Set(model.HEADER_AUTH, "BEARER "+c.Session.Token)
+
+	start := 0
+	if conns == nil {
+		conns = make([]*websocket.Conn, numConns)
+	} else {
+		start = len(conns)
+		conns = append(conns, make([]*websocket.Conn, numConns)...)
+	}
+
+	var err error
+	for i := start; i < len(conns); i++ {
+		conns[i], _, err = websocket.DefaultDialer.Dial(url, header)
+		if err != nil {
+			l4g.Error(err.Error())
+		}
+	}
+
+	return &model.CommandResponse{Text: fmt.Sprintf("Created %d WebSocket connections.", numConns), ResponseType: model.COMMAND_RESPONSE_TYPE_EPHEMERAL}
 }
 
 func (me *LoadTestProvider) HelpCommand(c *Context, channelId string, message string) *model.CommandResponse {
