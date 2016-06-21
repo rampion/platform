@@ -88,7 +88,7 @@ export default class ComplianceSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.compliance.directoryTitle'
-                            defaultMessage='Compliance Directory Location:'
+                            defaultMessage='Compliance Report Directory:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.sql.maxOpenExample', 'Ex "10"')}
