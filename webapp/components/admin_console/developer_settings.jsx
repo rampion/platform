@@ -48,13 +48,13 @@ export default class DeveloperSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.service.testingTitle'
-                            defaultMessage='Enable Testing: '
+                            defaultMessage='Enable Load Testing: '
                         />
                     }
                     helpText={
                         <FormattedMessage
                             id='admin.service.testingDescription'
-                            defaultMessage='(Developer Option) When true, /loadtest slash command is enabled to load test accounts and test data. Changing this will require a server restart before taking effect.'
+                            defaultMessage='When true, /loadtest slash command is enabled to load test accounts and test data. Changing this will require a server restart before taking effect.'
                         />
                     }
                     value={this.state.enableTesting}
@@ -71,7 +71,7 @@ export default class DeveloperSettings extends AdminSettings {
                     helpText={
                         <FormattedMessage
                             id='admin.service.developerDesc'
-                            defaultMessage='(Developer Option) When true, extra information around errors will be displayed in the UI.'
+                            defaultMessage='When true, extra information around errors will be displayed in the UI.'
                         />
                     }
                     value={this.state.enableDeveloper}
