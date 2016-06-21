@@ -89,7 +89,7 @@ export default class LdapSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.ldap.enableTitle'
-                            defaultMessage='Enable Login With LDAP:'
+                            defaultMessage='Enable Login with LDAP:'
                         />
                     }
                     helpText={
@@ -318,14 +318,14 @@ export default class LdapSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.ldap.idAttrTitle'
-                            defaultMessage='Id Attribute: '
+                            defaultMessage='ID Attribute: '
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.ldap.idAttrEx', 'Ex "sAMAccountName"')}
                     helpText={
                         <FormattedMessage
                             id='admin.ldap.idAttrDesc'
-                            defaultMessage='The attribute in the LDAP server that will be used as a unique identifier in Mattermost. It should be an LDAP attribute with a value that does not change, such as username or uid. If a user’s Id Attribute changes, it will create a new Mattermost account unassociated with their old one. This is the value used to log in to Mattermost in the "LDAP Username" field on the sign in page. Normally this attribute is the same as the “Username Attribute” field above. If your team typically uses domain\\username to sign in to other services with LDAP, you may choose to put domain\\username in this field to maintain consistency between sites.'
+                            defaultMessage='The attribute in the LDAP server that will be used as a unique identifier in Mattermost. It should be an LDAP attribute with a value that does not change, such as username or uid. If a user’s ID Attribute changes, it will create a new Mattermost account unassociated with their old one. This is the value used to log in to Mattermost in the "LDAP Username" field on the sign in page. Normally this attribute is the same as the “Username Attribute” field above. If your team typically uses domain\\username to sign in to other services with LDAP, you may choose to put domain\\username in this field to maintain consistency between sites.'
                         />
                     }
                     value={this.state.idAttribute}
@@ -337,7 +337,7 @@ export default class LdapSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.ldap.syncIntervalTitle'
-                            defaultMessage='Synchronization Interval (In Minutes)'
+                            defaultMessage='Synchronization Interval (Minutes)'
                         />
                     }
                     helpText={
@@ -372,7 +372,7 @@ export default class LdapSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.ldap.queryTitle'
-                            defaultMessage='Query Timeout (seconds):'
+                            defaultMessage='Query Timeout (Seconds):'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.ldap.queryEx', 'Ex "60"')}
@@ -391,7 +391,7 @@ export default class LdapSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.ldap.loginNameTitle'
-                            defaultMessage='Login Field Name:'
+                            defaultMessage='Login Field Default Text:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.ldap.loginNameEx', 'Ex "LDAP Username"')}
