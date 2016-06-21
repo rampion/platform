@@ -51,7 +51,7 @@ export default class SignupSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.requireVerificationTitle'
-                            defaultMessage='Require Email Verification: '
+                            defaultMessage='Enable Email Verification: '
                         />
                     }
                     helpText={
@@ -75,7 +75,7 @@ export default class SignupSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.inviteSaltTitle'
-                            defaultMessage='Invite Salt:'
+                            defaultMessage='Email Invite Salt:'
                         />
                     }
                     helpText={
