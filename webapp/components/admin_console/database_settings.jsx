@@ -97,7 +97,7 @@ export default class DatabaseSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.sql.maxConnectionsTitle'
-                            defaultMessage='Maximum Idle Connections:'
+                            defaultMessage='Max Idle Connections:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.sql.maxConnectionsExample', 'Ex "10"')}
@@ -115,7 +115,7 @@ export default class DatabaseSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.sql.maxOpenTitle'
-                            defaultMessage='Maximum Open Connections:'
+                            defaultMessage='Max Open Connections:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.sql.maxOpenExample', 'Ex "10"')}
