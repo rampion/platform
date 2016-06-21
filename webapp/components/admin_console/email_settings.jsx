@@ -69,7 +69,7 @@ export default class EmailSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.notificationsTitle'
-                            defaultMessage='Send Email Notifications: '
+                            defaultMessage='Enable Email Notifications: '
                         />
                     }
                     helpText={
@@ -86,7 +86,7 @@ export default class EmailSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.notificationDisplayTitle'
-                            defaultMessage='Notification Display Name:'
+                            defaultMessage='Email Notification Display Name:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.email.notificationDisplayExample', 'Ex: "Mattermost Notification", "System", "No-Reply"')}
@@ -105,7 +105,7 @@ export default class EmailSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.notificationEmailTitle'
-                            defaultMessage='Notification Email Address:'
+                            defaultMessage='Email Notification Address:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.email.notificationEmailExample', 'Ex: "mattermost@yourcompany.com", "admin@yourcompany.com"')}
@@ -124,7 +124,7 @@ export default class EmailSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.notificationOrganization'
-                            defaultMessage='Notification Footer Address:'
+                            defaultMessage='Email Notification Footer Address:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.email.notificationOrganizationExample', 'Ex: "© ABC Corporation, 565 Knight Way, Palo Alto, California, 94305, USA"')}
@@ -143,7 +143,7 @@ export default class EmailSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.smtpUsernameTitle'
-                            defaultMessage='SMTP Username:'
+                            defaultMessage='SMTP Server Username:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.email.smtpUsernameExample', 'Ex: "admin@yourcompany.com", "AKIADTOVBGERKLCBV"')}
@@ -162,7 +162,7 @@ export default class EmailSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.smtpPasswordTitle'
-                            defaultMessage='SMTP Password:'
+                            defaultMessage='SMTP Server Password:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.email.smtpPasswordExample', 'Ex: "yourpassword", "jcuS8PuvcpGhpgHhlcpT1Mx42pnqMxQY"')}
@@ -200,7 +200,7 @@ export default class EmailSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.email.smtpPortTitle'
-                            defaultMessage='SMTP Port:'
+                            defaultMessage='SMTP Server Port:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.email.smtpPortExample', 'Ex: "25", "465"')}
