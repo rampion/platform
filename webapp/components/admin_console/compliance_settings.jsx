@@ -70,7 +70,7 @@ export default class ComplianceSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.compliance.enableTitle'
-                            defaultMessage='Enable Compliance:'
+                            defaultMessage='Enable Compliance Reporting:'
                         />
                     }
                     helpText={
