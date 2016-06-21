@@ -87,7 +87,7 @@ export default class StorageSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.image.storeTitle'
-                            defaultMessage='Store Files In:'
+                            defaultMessage='File Storage System:'
                         />
                     }
                     value={this.state.driverName}
@@ -98,7 +98,7 @@ export default class StorageSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.image.localTitle'
-                            defaultMessage='Local Directory Location:'
+                            defaultMessage='Local File Directory:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.image.localExample', 'Ex "./data/"')}
@@ -117,7 +117,7 @@ export default class StorageSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.image.amazonS3IdTitle'
-                            defaultMessage='Amazon S3 Access Key Id:'
+                            defaultMessage='Amazon S3 Access Key ID:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.image.amazonS3IdExample', 'Ex "AKIADTOVBGERKLCBV"')}
