@@ -56,7 +56,7 @@ export default class LegalAndSupportSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.support.termsTitle'
-                            defaultMessage='Terms of Service link:'
+                            defaultMessage='Terms of Service Link:'
                         />
                     }
                     helpText={
@@ -73,7 +73,7 @@ export default class LegalAndSupportSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.support.privacyTitle'
-                            defaultMessage='Privacy Policy link:'
+                            defaultMessage='Privacy Policy Link:'
                         />
                     }
                     helpText={
@@ -90,7 +90,7 @@ export default class LegalAndSupportSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.support.aboutTitle'
-                            defaultMessage='About link:'
+                            defaultMessage='About Link:'
                         />
                     }
                     helpText={
@@ -107,7 +107,7 @@ export default class LegalAndSupportSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.support.helpTitle'
-                            defaultMessage='Help link:'
+                            defaultMessage='Help Link:'
                         />
                     }
                     helpText={
@@ -124,7 +124,7 @@ export default class LegalAndSupportSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.support.problemTitle'
-                            defaultMessage='Report a Problem link:'
+                            defaultMessage='Report a Problem Link:'
                         />
                     }
                     helpText={
@@ -141,7 +141,7 @@ export default class LegalAndSupportSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.support.emailTitle'
-                            defaultMessage='Support email:'
+                            defaultMessage='Support Email:'
                         />
                     }
                     helpText={
