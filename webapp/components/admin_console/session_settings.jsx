@@ -54,7 +54,7 @@ export default class SessionSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.service.webSessionDays'
-                            defaultMessage='Session Length for Web in Days:'
+                            defaultMessage='Web Session Length (Days):'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.service.sessionDaysEx', 'Ex "30"')}
@@ -72,7 +72,7 @@ export default class SessionSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.service.mobileSessionDays'
-                            defaultMessage='Session Length for Mobile Device in Days:'
+                            defaultMessage='Mobile Session Length (Days):'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.service.sessionDaysEx', 'Ex "30"')}
@@ -90,7 +90,7 @@ export default class SessionSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.service.ssoSessionDays'
-                            defaultMessage='Session Length for SSO in Days:'
+                            defaultMessage='SSO Session Length (Days):'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.service.sessionDaysEx', 'Ex "30"')}
@@ -108,7 +108,7 @@ export default class SessionSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.service.sessionCache'
-                            defaultMessage='Session Cache in Minutes:'
+                            defaultMessage='Session Cache (Minutes):'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.service.sessionDaysEx', 'Ex "30"')}
