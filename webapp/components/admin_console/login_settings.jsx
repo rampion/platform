@@ -103,7 +103,7 @@ export default class LoginSettings extends AdminSettings {
                     label={
                         <FormattedMessage
                             id='admin.service.attemptTitle'
-                            defaultMessage='Maximum Login Attempts:'
+                            defaultMessage='Max Login Attempts:'
                         />
                     }
                     placeholder={Utils.localizeMessage('admin.service.attemptExample', 'Ex "10"')}
