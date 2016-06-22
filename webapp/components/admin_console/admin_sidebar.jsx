@@ -266,7 +266,7 @@ export default class AdminSidebar extends React.Component {
                             title={
                                 <FormattedMessage
                                     id='admin.sidebar.reports'
-                                    defaultMessage='SITE REPORTS'
+                                    defaultMessage='REPORTING'
                                 />
                             }
                         >
@@ -275,7 +275,7 @@ export default class AdminSidebar extends React.Component {
                                 title={
                                     <FormattedMessage
                                         id='admin.sidebar.view_statistics'
-                                        defaultMessage='View Statistics'
+                                        defaultMessage='Site Statistics'
                                     />
                                 }
                             />
