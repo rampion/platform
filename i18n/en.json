@@ -2532,6 +2532,10 @@
     "translation": "Invalid maximum users per team for team settings.  Must be a positive number."
   },
   {
+    "id": "model.config.is_valid.max_channels.app_error",
+    "translation": "Invalid maximum channels per team for team settings.  Must be a positive number."
+  },
+  {
     "id": "model.config.is_valid.rate_mem.app_error",
     "translation": "Invalid memory store size for rate limit settings.  Must be a positive number"
   },

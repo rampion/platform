@@ -166,6 +166,7 @@ type SupportSettings struct {
 type TeamSettings struct {
 	SiteName                  string
 	MaxUsersPerTeam           int
+	MaxChannelsPerTeam        int
 	EnableTeamCreation        bool
 	EnableUserCreation        bool
 	EnableOpenServer          *bool
@@ -619,6 +620,10 @@ func (o *Config) IsValid() *AppError {
 
 	if o.TeamSettings.MaxUsersPerTeam <= 0 {
 		return NewLocAppError("Config.IsValid", "model.config.is_valid.max_users.app_error", nil, "")
+	}
+
+	if o.TeamSettings.MaxChannelsPerTeam <= 0 {
+		return NewLocAppError("Config.IsValid", "model.config.is_valid.max_channels.app_error", nil, "")
 	}
 
 	if !(*o.TeamSettings.RestrictDirectMessage == DIRECT_MESSAGE_ANY || *o.TeamSettings.RestrictDirectMessage == DIRECT_MESSAGE_TEAM) {

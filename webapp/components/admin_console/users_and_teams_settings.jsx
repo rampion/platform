@@ -27,6 +27,7 @@ export default class UsersAndTeamsSettings extends AdminSettings {
             enableUserCreation: props.config.TeamSettings.EnableUserCreation,
             enableTeamCreation: props.config.TeamSettings.EnableTeamCreation,
             maxUsersPerTeam: props.config.TeamSettings.MaxUsersPerTeam,
+            maxChannelsPerTeam: props.config.TeamSettings.MaxChannelsPerTeam,
             restrictCreationToDomains: props.config.TeamSettings.RestrictCreationToDomains,
             restrictTeamNames: props.config.TeamSettings.RestrictTeamNames,
             restrictDirectMessage: props.config.TeamSettings.RestrictDirectMessage
@@ -37,6 +38,7 @@ export default class UsersAndTeamsSettings extends AdminSettings {
         config.TeamSettings.EnableUserCreation = this.state.enableUserCreation;
         config.TeamSettings.EnableTeamCreation = this.state.enableTeamCreation;
         config.TeamSettings.MaxUsersPerTeam = this.parseIntNonZero(this.state.maxUsersPerTeam);
+        config.TeamSettings.MaxChannelsPerTeam = this.parseIntNonZero(this.state.maxChannelsPerTeam);
         config.TeamSettings.RestrictCreationToDomains = this.state.restrictCreationToDomains;
         config.TeamSettings.RestrictTeamNames = this.state.restrictTeamNames;
         config.TeamSettings.RestrictDirectMessage = this.state.restrictDirectMessage;

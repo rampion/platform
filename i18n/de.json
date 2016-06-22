@@ -2532,6 +2532,10 @@
     "translation": "Ungültige maximale Anzahl an Benutzers pro Team in Teameinstellungen.  Muss eine positive Zahl sein."
   },
   {
+    "id": "model.config.is_valid.max_channels.app_error",
+    "translation": "Ungültige maximale Anzahl an Kanäle pro Team in Teameinstellungen.  Muss eine positive Zahl sein."
+  },
+  {
     "id": "model.config.is_valid.rate_mem.app_error",
     "translation": "Ungültige Speichergröße für Anfragenbegrenzer Einstellungen.  Muss eine positive Zahl sein."
   },

@@ -100,6 +100,7 @@ func TestReloadConfig(t *testing.T) {
 	}
 
 	utils.Cfg.TeamSettings.MaxUsersPerTeam = 50
+	utils.Cfg.TeamSettings.MaxChannelsPerTeam = 1000
 	*utils.Cfg.TeamSettings.EnableOpenServer = true
 }
 

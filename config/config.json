@@ -30,6 +30,7 @@
     "TeamSettings": {
         "SiteName": "Mattermost",
         "MaxUsersPerTeam": 50,
+        "MaxChannelsPerTeam": 1000,
         "EnableTeamCreation": true,
         "EnableUserCreation": true,
         "EnableOpenServer": false,
